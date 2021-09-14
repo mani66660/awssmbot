@@ -1,4 +1,4 @@
-[![Slam](https://telegra.ph/file/db03910496f06094f1f7a.jpg)](https://youtu.be/Pk_TthHfLeE)
+[![Slam](https://gitlab.awslink.in/api/logoposter.jpg)](https://youtu.be/Pk_TthHfLeE)
 
 # Slam Mirror Bot
 ![GitHub Repo stars](https://img.shields.io/github/stars/SlamDevs/slam-mirrorbot?color=blue&style=flat)
@@ -7,6 +7,64 @@
 ![GitHub watchers](https://img.shields.io/github/watchers/SlamDevs/slam-mirrorbot)
 ![Docker Pulls](https://img.shields.io/docker/pulls/breakdowns/mega-sdk-python?label=Docker%20Pull)
 [![Channel](https://img.shields.io/badge/Join%20Channel-!-red)](https://t.me/SlamMirrorUpdates)
+
+#Fix index link while searching https://t.me/SlamMirrorUpdates 07-09-2021 Last Updates.
+
+## How to Add Torrent Search Extra Bot Addons
+- bot/modules/torrent_search.py add file - torrent_search.py
+- bot/helper/custom_filters.py add file - custom_filters.py
+- Add torrent_search (bot/__main__.py) 20 line add - from .modules import authorize, list, cancel_mirror, mirror_status, mirror, clone, watch, shell, eval, torrent_search, delete, speedtest, count, reboot
+- /{BotCommands.TsHelpCommand}: Get help for Torrent search module        - 140 line bot comments msg
+- /{BotCommands.TsHelpCommand}: Get help for Torrent search module        - 172 line bot comments msg
+- (f'{BotCommands.TsHelpCommand}','Get help for Torrent search module')   - 200 line bot comment set
+- bot/helper/telegram_helper/bot_commands.py      self.TsHelpCommand = 'tshelp'     - 30line last bot comment set
+- docker-compose.yml - 10,11 line add space
+- DONE.
+
+- Torrent search Supported:
+```
+nyaa.si, sukebei, 1337x, piratebay,
+tgx, yts, eztv, torlock, rarbg
+```
+https://github.com/digidigido3/slam-mirrorbot/blob/master/bot/modules/search.py  and add 165 line
+```
+TORRENT_API_URL = 'https://api.linkstore.eu.org/api'
+
+torrents_dict = {
+    '1337x': {'source': f"{TORRENT_API_URL}/api/1337x/", 'result_str': RESULT_STR_1337X},
+    'piratebay': {'source': f"{TORRENT_API_URL}/api/piratebay/", 'result_str': RESULT_STR_PIRATEBAY},
+    'tgx': {'source': f"{TORRENT_API_URL}/api/tgx/", 'result_str': RESULT_STR_TGX},
+    'yts': {'source': f"{TORRENT_API_URL}/api/yts/", 'result_str': RESULT_STR_YTS},
+    'eztv': {'source': f"{TORRENT_API_URL}/api/eztv/", 'result_str': RESULT_STR_EZTV},
+    'torlock': {'source': f"{TORRENT_API_URL}/api/torlock/", 'result_str': RESULT_STR_TORLOCK},
+    'rarbg': {'source': f"{TORRENT_API_URL}/api/rarbg/", 'result_str': RESULT_STR_RARBG},
+    'ts': {'source': f"{TORRENT_API_URL}/api/all/", 'result_str': RESULT_STR_ALL}
+}
+```
+```
+torrents_dict = {
+    '1337x': {'source': "https://api.eunhamirror.repl.co/api/1337x/", 'result_str': RESULT_STR_1337},
+    'piratebay': {'source': "https://api.eunhamirror.repl.co/api/piratebay/", 'result_str': RESULT_STR_PIRATEBAY},
+    'tgx': {'source': "https://api.eunhamirror.repl.co/api/tgx/", 'result_str': RESULT_STR_TGX},
+    'yts': {'source': "https://api.eunhamirror.repl.co/api/yts/", 'result_str': RESULT_STR_YTS},
+    'eztv': {'source': "https://api.eunhamirror.repl.co/api/eztv/", 'result_str': RESULT_STR_EZTV},
+    'torlock': {'source': "https://api.eunhamirror.repl.co/api/torlock/", 'result_str': RESULT_STR_TORLOCK},
+    'rarbg': {'source': "https://api.eunhamirror.repl.co/api/rarbg/", 'result_str': RESULT_STR_RARBG},
+    'ts': {'source': "https://api.eunhamirror.repl.co/api/all/", 'result_str': RESULT_STR_ALL}
+}
+```
+```
+torrents_dict = {
+    '1337x': {'source': "https://torrents-api.netlify.app/.netlify/functions/api/1337x/", 'result_str': RESULT_STR_1337},
+    'piratebay': {'source': "https://torrents-api.netlify.app/.netlify/functions/api/piratebay/", 'result_str': RESULT_STR_PIRATEBAY},
+    'tgx': {'source': "https://torrents-api.netlify.app/.netlify/functions/api/tgx/", 'result_str': RESULT_STR_TGX},
+    'yts': {'source': "https://torrents-api.netlify.app/.netlify/functions/api/yts/", 'result_str': RESULT_STR_YTS},
+    'eztv': {'source': "https://torrents-api.netlify.app/.netlify/functions/api/eztv/", 'result_str': RESULT_STR_EZTV},
+    'torlock': {'source': "https://torrents-api.netlify.app/.netlify/functions/api/torlock/", 'result_str': RESULT_STR_TORLOCK},
+    'rarbg': {'source': "https://torrents-api.netlify.app/.netlify/functions/api/rarbg/", 'result_str': RESULT_STR_RARBG},
+    'ts': {'source': "https://torrents-api.netlify.app/.netlify/functions/api/all/", 'result_str': RESULT_STR_ALL}
+}
+```
 
 **Slam Mirror Bot** is a _multipurpose_ Telegram Bot written in Python for mirroring files on the Internet to our beloved Google Drive. Based on [python-aria-mirror-bot](https://github.com/lzzy12/python-aria-mirror-bot)
 
